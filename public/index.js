@@ -29,7 +29,7 @@ function Zipper (event) {
 
 
 
-    fetch('http://localhost:3001/results/'+`${ZIPcode.value}`)
+    fetch('http://localhost:3009/results/'+`${ZIPcode.value}`)
     .then(response => response.json())
     .then(data => {
         // console.log(data)
@@ -46,12 +46,12 @@ function Zipper (event) {
             const title = data.local_results[index].title;
 
             // Gets the image of the park
-            const imgURL = data.local_results[index].photos_link
-            fetch(imgURL)
-            .then(response => response.json())
-            .then(data => {
-                console.log(data.photos[0])
-            })
+            // const imgURL = data.local_results[index].photos_link
+            // fetch(imgURL)
+            // .then(response => response.json())
+            // .then(data => {
+            //     console.log(data.photos[0])
+            // })
 
             // Creates HTML element for said title
             const element = document.createElement('div');

@@ -13,6 +13,9 @@ router.get('/', (req, res) => {
 router.get('/results/:zip',  async (req, res) => {
     
     const zip = req.params.zip
+    // console.log(process.env)
+
+    // console.log(req.params.zip)
 
 
         // console.log(req.body.zip)
